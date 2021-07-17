@@ -5,9 +5,7 @@
 --------------------------------------------------------------------------------
 # to run Laravel:
 >  php artisan serve
-
 --------------------------------------------------------------------------------
-
       <!-- var pass -->
       <!-- <h1>{{$name}}</h1> -->
 
@@ -21,5 +19,17 @@
           <h1>{{$products[$i]}}</h1>
       @endfor -->
 --------------------------------------------------------------------------------
+route parameters:
+1. query parameter (in url after question mark)
+2. route parameter (in url after /)
+
+example:
 http://127.0.0.1:8000/home/9631/23?username=sumu
 --------------------------------------------------------------------------------
+route methods:
+1. get (we use for all operations and shows details in URL)
+2. post (we use for all operations but does not show details in URL)
+3. put (we use to update)
+4. delete (we use to delete)
+5. patch (we dont use much generally)
+6. option (we dont use much generally)
