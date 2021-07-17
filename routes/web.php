@@ -53,6 +53,8 @@ Route::view('/', 'welcome');
 
 Route::get('/home','HomeController@index');
 
+Route::get('/home/{userid}/{age}','HomeController@show');
+
 Route::get('/custom-form', function (){
    return view('customform');
 });
