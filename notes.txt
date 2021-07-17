@@ -1,0 +1,9 @@
+# to install Laravel:
+// >  composer create-project laravel/laravel {directory} 4.2 --prefer-dist
+> composer create-project laravel/laravel LaravelProject1 7.x --prefer-dist
+
+--------------------------------------------------------------------------------
+# to run Laravel:
+>  php artisan serve
+
+--------------------------------------------------------------------------------
