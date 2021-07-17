@@ -33,3 +33,8 @@ route methods:
 4. delete (we use to delete)
 5. patch (we dont use much generally)
 6. option (we dont use much generally)
+<?php
+--------------------------------------------------------------------------------
+controller creation commands:
+>php artisan make:controller HomeController
+--------------------------------------------------------------------------------

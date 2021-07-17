@@ -45,11 +45,13 @@ Route::view('/', 'welcome');
 //     return view('homepage', ['products'=>$items, 'username'=>$userName]);
 // });
 
-Route::get('/home/{userid}/{age}', function ($userid, $age){
-    $userName= request('username');
-    $items= array('table', 'chair', 'stool');
-    return view('homepage', ['products'=>$items, 'username'=>$userName, 'userid'=>$userid, 'age'=>$age]);
-});
+// Route::get('/home/{userid}/{age}', function ($userid, $age){
+//     $userName= request('username');
+//     $items= array('table', 'chair', 'stool');
+//     return view('homepage', ['products'=>$items, 'username'=>$userName, 'userid'=>$userid, 'age'=>$age]);
+// });
+
+Route::get('/home','HomeController@index');
 
 Route::get('/custom-form', function (){
    return view('customform');
