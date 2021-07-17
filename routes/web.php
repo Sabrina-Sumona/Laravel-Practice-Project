@@ -34,7 +34,19 @@ Route::view('/', 'welcome');
 //     return view('homepage', ['product'=>'table']);
 // });
 
-Route::get('/home', function (){
+// Route::get('/home', function (){
+//     $items= array('table', 'chair', 'stool');
+//     return view('homepage', ['name'=>'sumu'], ['products'=>$items]);
+// });
+
+// Route::get('/home', function (){
+//     $userName= request('username');
+//     $items= array('table', 'chair', 'stool');
+//     return view('homepage', ['products'=>$items, 'username'=>$userName]);
+// });
+
+Route::get('/home/{userid}/{age}', function ($userid, $age){
+    $userName= request('username');
     $items= array('table', 'chair', 'stool');
-    return view('homepage', ['name'=>'sumu'], ['products'=>$items]);
+    return view('homepage', ['products'=>$items, 'username'=>$userName, 'userid'=>$userid, 'age'=>$age]);
 });

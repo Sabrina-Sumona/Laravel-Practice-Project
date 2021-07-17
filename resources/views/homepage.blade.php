@@ -9,27 +9,18 @@
           <br>
           This is my Homepage
       </div>
-
-      <!-- var pass -->
-      <!-- <h1>{{$name}}</h1> -->
-
-      <!-- For each loop -->
-      <!-- @foreach($products as $product)
-         <h1>{{$product}}</h1>
-      @endforeach -->
-
-      <!-- For loop -->
-      <!-- @for($i=0; $i<3; $i++)
-          <h1>{{$products[$i]}}</h1>
-      @endfor -->
+      <img src="/img/img3.png" alt="this is my image" width="100px" height="110px">
+      <div>
+            <h1>Hi, I am {{$username}}. My user ID = {{$userid}} and My age = {{$age}}.</h1>
+      </div>
 
       @foreach($products as $product)
           @if($product=='table')
-              <h1>{{$product}}</h1>
+              <h4>{{$product}}</h4>
           @elseif($product=='chair')
-              <h1>{{$product}}</h1>
+              <h4>{{$product}}</h4>
           @else
-              <h1>This is neither a table nor a chair.</h1>
+              <h4>This is neither a table nor a chair.</h4>
           @endif
       @endforeach
   </div>
