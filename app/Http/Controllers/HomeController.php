@@ -31,8 +31,7 @@ class HomeController extends Controller
       // dd($products);
       // Product::create([
       //     'id'=>4,
-      //     '
-      // name'=>'mug',
+      //     'name'=>'mug',
       //     'quantity'=>1000,
       //     'price'=>250,
       //     'color' =>'blue'
@@ -47,8 +46,25 @@ class HomeController extends Controller
       // $readOperation = Product::select('name','price','quantity')->where('id','=', 1)->get();
       // $readOperation = Product::select('name','price','quantity')->where('id','>=', 2)->get();
       // $readOperation = Product::select('name','price','quantity')->where('color','=', 'blue')->get();
-      $readOperation = Product::select('name','price','quantity')->where('price','<', 250)->first();
+      // $readOperation = Product::select('name','price','quantity')->where('price','<', 250)->first();
       // dd($readOperation);
-      return $readOperation;
+      // return $readOperation;
+
+      // Product::where('id','=',1)->update([
+      //   'name'=>'table',
+      //   'quantity'=>'200'
+      // ]);
+
+     // Product::where('id', '=', '1')->delete();
+     // Product::create([
+     //     'id'=>1,
+     //     'name'=>'table',
+     //     'quantity'=>200,
+     //     'price'=>500,
+     //     'color' =>'red'
+     // ]);
+     // return 'Successfullly Executed!';
+
+     return 'Successfullly Executed!';
   }
 }
