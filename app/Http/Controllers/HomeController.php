@@ -10,8 +10,15 @@ class HomeController extends Controller
 {
   public function index(){
       // return view('welcome');
+
       // return Product::find(4)->user;
-      return Product::find(4)->user_one_to_many;
+      // return Product::with('user')->find(4);
+
+      // return Product::find(4)->user_one_to_many;
+      // return Product::with('user_one_to_many')->find(4);
+
+      // return Product::find(3)->many_to_many;
+      return Product::with('many_to_many')->find(3);
   }
 
   public function show(Request $request){
