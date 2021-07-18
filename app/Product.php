@@ -19,4 +19,8 @@ class Product extends Model
   public function user(){
     return $this->hasOne(User::class, 'products_id','id');
   }
+
+  public function user_one_to_many(){
+        return $this->hasMany(User::class, 'products_id','id');
+    }
 }
