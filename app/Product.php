@@ -15,4 +15,8 @@ class Product extends Model
   protected $keyType= 'string';
 
   public $incrementing= false;
+
+  public function user(){
+    return $this->hasOne(User::class, 'products_id','id');
+  }
 }

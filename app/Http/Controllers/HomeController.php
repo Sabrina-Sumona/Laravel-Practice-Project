@@ -9,7 +9,8 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
   public function index(){
-      return view('welcome');
+      // return view('welcome');
+      return Product::find(4)->user;
   }
 
   public function show(Request $request){
