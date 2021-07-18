@@ -55,6 +55,11 @@ Route::get('/home','HomeController@index');
 
 Route::get('/home/{userid}/{age}','HomeController@show');
 
+Route::get('/insert','HomeController@insertOperation');
+Route::get('/read','HomeController@readOperation');
+Route::get('/update','HomeController@updateOperation');
+Route::get('/delete','HomeController@deleteOperation');
+
 Route::get('/custom-form', function (){
    return view('customform');
 });
