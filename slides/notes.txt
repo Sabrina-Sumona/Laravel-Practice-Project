@@ -1,0 +1,95 @@
+# to install Laravel:
+// >  composer create-project laravel/laravel {directory} 4.2 --prefer-dist
+> composer create-project laravel/laravel LaravelProject1 7.x --prefer-dist
+
+--------------------------------------------------------------------------------
+# to run Laravel:
+>  php artisan serve
+--------------------------------------------------------------------------------
+      <!-- var pass -->
+      <!-- <h1>{{$name}}</h1> -->
+
+      <!-- For each loop -->
+      <!-- @foreach($products as $product)
+         <h1>{{$product}}</h1>
+      @endforeach -->
+
+      <!-- For loop -->
+      <!-- @for($i=0; $i<3; $i++)
+          <h1>{{$products[$i]}}</h1>
+      @endfor -->
+--------------------------------------------------------------------------------
+route parameters:
+1. query parameter (in url after question mark)
+2. route parameter (in url after /)
+
+example:
+http://127.0.0.1:8000/home/9631/23?username=sumu
+--------------------------------------------------------------------------------
+route methods:
+1. get (we use for all operations and shows details in URL)
+2. post (we use for all operations but does not show details in URL)
+3. put (we use to update)
+4. delete (we use to delete)
+5. patch (we dont use much generally)
+6. option (we dont use much generally)
+<?php
+--------------------------------------------------------------------------------
+controller creation commands:
+>php artisan make:controller HomeController
+--------------------------------------------------------------------------------
+after applying changes:
+>php artisan optimize:clear
+--------------------------------------------------------------------------------
+migration 7 commands:
+>php artisan migrate
+>php artisan migrate:install
+>php artisan migrate:rollback
+>php artisan migrate:reset
+>php artisan migrate:fresh
+>php artisan migrate:refresh
+>php artisan migrate:status
+--------------------------------------------------------------------------------
+for create migration file for creating 'products' table:
+>php artisan make:migration create_products_table
+
+then edit the migration to add more cols
+
+check status:
+>php artisan migrate:status
+
+and Run to migrate:
+>php artisan migrate
+--------------------------------------------------------------------------------
+after adding more tables in 'products' table:
+>php artisan migrate:rollback
+
+check status:
+>php artisan migrate:status
+
+and Run to migrate:
+>php artisan migrate
+--------------------------------------------------------------------------------
+if we rollback with data the data will be vanished
+for that we can create new migration
+>php artisan make:migration add_color_to_products_table
+
+then edit the migration to add more cols
+
+check status:
+>php artisan migrate:status
+
+and Run to migrate:
+>php artisan migrate
+--------------------------------------------------------------------------------
+the color col will be added at last
+if we want it before timestamps we need to cut & paste timestamps part after the color
+
+then we need to refresh:
+>php artisan migrate:refresh
+--------------------------------------------------------------------------------
+for create model file for 'products' table:
+>php artisan make:model Product
+
+for create model file for 'users' table:
+>php artisan make:model User

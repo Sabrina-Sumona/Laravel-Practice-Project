@@ -25,6 +25,15 @@ class HomeController extends Controller
       // $products = Product::find($id);
       // $products= Product::where('price','>', 200)->get();
       // $products= Product::orderBy('price', 'desc')->get();
-       $products= Product::orderBy('price', 'asc')->get();
-      dd($products);
+      // $products= Product::orderBy('price', 'asc')->get();
+      // dd($products);
+      Product::create([
+          'id'=>4,
+          'name'=>'mug',
+          'quantity'=>1000,
+          'price'=>250,
+          'color' =>'blue'
+      ]);
+      return 'Successfullly Executed!';
   }
+}

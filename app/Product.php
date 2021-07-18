@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-  // protected $table= 'products';
+  protected $table= 'products';
 
-  // protected $fillable= ['name', 'price', 'color' 'created_at', 'updated_at'];
+  protected $fillable= ['name', 'quantity', 'price', 'color', 'created_at', 'updated_at'];
 
-  // protected $primaryKey= 'id';
+  protected $primaryKey= 'id';
 
-  // protected $keyType= 'string';
+  protected $keyType= 'string';
 
-  // public $incrementing= false;
+  public $incrementing= false;
 }
