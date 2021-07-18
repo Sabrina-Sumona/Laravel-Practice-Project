@@ -54,8 +54,36 @@ for create migration file for creating 'products' table:
 >php artisan make:migration create_products_table
 
 then edit the migration to add more cols
+
 check status:
 >php artisan migrate:status
 
 and Run to migrate:
 >php artisan migrate
+--------------------------------------------------------------------------------
+after adding more tables in 'products' table:
+>php artisan migrate:rollback
+
+check status:
+>php artisan migrate:status
+
+and Run to migrate:
+>php artisan migrate
+--------------------------------------------------------------------------------
+if we rollback with data the data will be vanished
+for that we can create new migration
+>php artisan make:migration add_color_to_products_table
+
+then edit the migration to add more cols
+
+check status:
+>php artisan migrate:status
+
+and Run to migrate:
+>php artisan migrate
+--------------------------------------------------------------------------------
+the color col will be added at last
+if we want it before timestamps we need to cut & paste timestamps part after the color
+
+then we need to refresh:
+>php artisan migrate:refresh
