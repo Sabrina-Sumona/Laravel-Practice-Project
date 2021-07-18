@@ -16,6 +16,6 @@ class HomeController extends Controller
       $username= request('username');
       $products= array('table', 'chair', 'stool');
       // return view('homepage', ['products'=>$products, 'username'=>$username, 'userid'=>$userid, 'age'=>$age]);
-      return view('hom epage',compact('userid','age','username','products'));
+      return view('homepage',compact('userid','age','username','products'));
   }
 }

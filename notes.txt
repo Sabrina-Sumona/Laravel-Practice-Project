@@ -87,3 +87,9 @@ if we want it before timestamps we need to cut & paste timestamps part after the
 
 then we need to refresh:
 >php artisan migrate:refresh
+--------------------------------------------------------------------------------
+for create model file for 'products' table:
+>php artisan make:model Product
+
+for create model file for 'users' table:
+>php artisan make:model User
