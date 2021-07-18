@@ -49,3 +49,13 @@ migration 7 commands:
 >php artisan migrate:fresh
 >php artisan migrate:refresh
 >php artisan migrate:status
+--------------------------------------------------------------------------------
+for create migration file for creating 'products' table:
+>php artisan make:migration create_products_table
+
+then edit the migration to add more cols
+check status:
+>php artisan migrate:status
+
+and Run to migrate:
+>php artisan migrate
