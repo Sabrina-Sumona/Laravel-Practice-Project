@@ -1,7 +1,8 @@
 # to install Laravel:
 // >  composer create-project laravel/laravel {directory} 4.2 --prefer-dist
 > composer create-project laravel/laravel LaravelProject1 7.x --prefer-dist
-
+> composer create-project laravel/laravel {directory} "5.0.*" --prefer-dist
+> composer create-project laravel/laravel Laravel_Ecommerce_Project "8.*" --prefer-dist
 --------------------------------------------------------------------------------
 # to run Laravel:
 >  php artisan serve
