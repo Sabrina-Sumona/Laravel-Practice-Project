@@ -2,7 +2,8 @@
 // >  composer create-project laravel/laravel {directory} 4.2 --prefer-dist
 > composer create-project laravel/laravel LaravelProject1 7.x --prefer-dist
 > composer create-project laravel/laravel {directory} "5.0.*" --prefer-dist
-> composer create-project laravel/laravel Laravel_Ecommerce_Project "8.*" --prefer-dist
+> composer create-project laravel/laravel Laravel_Ecommerce_Project "8.*"
+                                                              --prefer-dist
 --------------------------------------------------------------------------------
 # to run Laravel:
 >  php artisan serve
@@ -84,7 +85,8 @@ and Run to migrate:
 >php artisan migrate
 --------------------------------------------------------------------------------
 the color col will be added at last
-if we want it before timestamps we need to cut & paste timestamps part after the color
+if we want it before timestamps we need to cut & paste timestamps
+part after the color
 
 then we need to refresh:
 >php artisan migrate:refresh
@@ -94,3 +96,13 @@ for create model file for 'products' table:
 
 for create model file for 'users' table:
 >php artisan make:model User
+--------------------------------------------------------------------------------
+Resource controller:
+php artisan make:controller UserController --resource
+
+Resource controller & Model:
+//>php artisan make:controller PhotoController --resource --model=Photo
+for laravel 8 or more
+>php artisan make:controller ProductController --resource --model=Product
+for less than laravel 8
+>php artisan make:controller ProductController --resource --model=Models\Product
