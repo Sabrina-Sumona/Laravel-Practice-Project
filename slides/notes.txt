@@ -111,3 +111,7 @@ php artisan make:controller UserController --resource
 --------------------------------------------------------------------------------
 # for adding multiple products
 <input type="file" name="images[]" multiple>
+--------------------------------------------------------------------------------
+# pagination:
+php artisan vendor:publish --tag=la
+ravel-pagination
