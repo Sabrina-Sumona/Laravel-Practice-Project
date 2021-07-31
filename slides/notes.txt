@@ -151,3 +151,6 @@ ravel-pagination
 # Usage - Cart::remove()
 
 > Cart::remove($rowId);
+--------------------------------------------------------------------------------
+# Custom middleware
+> php artisan make:middleware CheckUser
