@@ -68,6 +68,9 @@ http://127.0.0.1:8000/home/9631/23?username=sumu
 # after adding more tables in 'products' table:
 >php artisan migrate:rollback
 
+# to rollback the last migration
+php artisan migrate:rollback --step=1
+
 # check status:
 >php artisan migrate:status
 
@@ -113,5 +116,38 @@ php artisan make:controller UserController --resource
 <input type="file" name="images[]" multiple>
 --------------------------------------------------------------------------------
 # pagination:
-php artisan vendor:publish --tag=la
+> php artisan vendor:publish --tag=la
 ravel-pagination
+--------------------------------------------------------------------------------
+# Installing External Cart Package
+> composer require olimortimer/laravelshoppingcart
+
+# open your config/app.php file. Add a new line to the providers array:
+> Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+
+# And optionally add a new line to the aliases array:
+> 'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+
+# Usage - Cart::add() :
+
+// > Cart::add('293ad', 'Product 1', 1, 9.99);
+> Cart::add($id, $name, $quantity, $price);
+
+// > Cart::add('293ad', 'Product 1', 1, 9.99, ['size' => 'large']);
+> Cart::add($id, $name, $quantity, $price, ['size' => $size]);
+
+// > Cart::add(['id' => '293ad', 'name' => 'Product 1', 'qty' => 1, 'price' => 9.99, 'options' => ['size' => 'large']]);
+> Cart::add($id, $name, $quantity, $price, ['size' => $size, 'image'=>$image, 'total'=> $total]);
+
+# Usage - Cart::update()
+
+// > Cart::update($rowId, 2); // Will update the quantity
+
+// > Cart::update($rowId, ['name' => 'Product 1']); // Will update the name
+// > Cart::update($rowId, $product); // Will update the id, name and price
+
+> Cart::update($cart->rowId, ['qty'=>$quantity, 'options'=> ['size' => $size, 'image'=>$image, 'total'=> $total]]);
+
+# Usage - Cart::remove()
+
+> Cart::remove($rowId);
