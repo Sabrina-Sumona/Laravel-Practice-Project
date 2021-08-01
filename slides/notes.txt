@@ -5,6 +5,9 @@
 > composer create-project laravel/laravel LaravelProject1 7.x --prefer-dist
 > composer create-project laravel/laravel {directory} "5.0.*" --prefer-dist
 > composer create-project laravel/laravel Laravel_Ecommerce_Project "8.*"--prefer-dist
+> composer create-project --prefer-dist laravel/laravel:^7.0 blog
+> composer create-project --prefer-dist laravel/laravel:^8.* face_c
+lone
 --------------------------------------------------------------------------------
 # to run Laravel:
 >  php artisan serve
