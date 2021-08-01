@@ -154,3 +154,18 @@ ravel-pagination
 --------------------------------------------------------------------------------
 # Custom middleware
 > php artisan make:middleware CheckUser
+--------------------------------------------------------------------------------
+# For Sending Email as REST edit .env file
+MAIL_HOST=smtp.googlemail.com
+MAIL_PORT=465
+MAIL_USERNAME=snsbauet04@gmail.com//receiver
+MAIL_PASSWORD=naorin540
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS=snsbauet04@gmail.com//sender
+--------------------------------------------------------------------------------
+# for creating mail file:
+> php artisan make:mail te
+stmail
+--------------------------------------------------------------------------------
+#send reset password email:
+http://localhost:8000/api/send-email?email=snsbauet04@gmail.com
