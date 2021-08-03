@@ -206,3 +206,11 @@ Route::get('email/resend', 'Auth\VerificationController@resend')->name('verifica
 --------------------------------------------------------------------------------
 # check route list:
 > php artisan route:list
+--------------------------------------------------------------------------------
+# Migrating update_users_table Error:
+Class 'Doctrine\DBAL\Driver\AbstractMySQLDriver' not found
+
+# Solution:
+> composer require doctrine/dbal ^2.*
+
+>composer update
