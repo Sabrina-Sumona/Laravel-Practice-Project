@@ -214,3 +214,9 @@ Class 'Doctrine\DBAL\Driver\AbstractMySQLDriver' not found
 > composer require doctrine/dbal ^2.*
 
 >composer update
+--------------------------------------------------------------------------------
+# to add helpers file add file location to autoload part of of composer.json file then run
+> composer dump-autoload
+--------------------------------------------------------------------------------
+#in app.js in config folder set timezone
+timezone' => 'Asia/Dhaka',
