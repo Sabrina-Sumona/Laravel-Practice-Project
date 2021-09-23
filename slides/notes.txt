@@ -220,3 +220,10 @@ Class 'Doctrine\DBAL\Driver\AbstractMySQLDriver' not found
 --------------------------------------------------------------------------------
 #in app.js in config folder set timezone
 timezone' => 'Asia/Dhaka',
+--------------------------------------------------------------------------------
+# Laravel Notifications (https://www.nicesnippets.com/blog/laravel-8-notification-tutorial)
+> php artisan notifications:table
+> php artisan make:notification AlertNotification
+> edit AlertNotification
+> create Routes
+> create Controllers
