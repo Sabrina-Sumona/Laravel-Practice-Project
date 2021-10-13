@@ -227,3 +227,11 @@ timezone' => 'Asia/Dhaka',
 > edit AlertNotification
 > create Routes
 > create Controllers
+--------------------------------------------------------------------------------
+#PHPUnit testing
+
+#create test
+->php artisan make:test BasicTest --unit
+
+#run test
+->php artisan test
